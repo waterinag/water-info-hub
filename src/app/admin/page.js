@@ -58,7 +58,7 @@ function ProjectCard({ project, onView, onDelete }) {
                 key={i}
                 className="px-2 py-0.5 text-xs bg-blue-50 text-blue-700 rounded-full"
               >
-                {kw.trim()}
+            {kw.trim().toUpperCase()}
               </span>
             ))}
           </div>
