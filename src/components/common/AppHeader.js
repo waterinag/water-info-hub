@@ -99,11 +99,7 @@ function AppHeader() {
           className="bg-[#FCFCFD]"
         >
           <Flex gap="3" align="center">
-            <Flex as="span" display={{ initial: "flex", sm: "none" }}>
-              <Button variant="ghost" onClick={() => setShowNav(!showNav)}>
-                <HamburgerMenuIcon />
-              </Button>
-            </Flex>
+
             <Image src="/images/Logo.png" alt="Logo" width={70} height={30} />
             <Image
               src="/images/WBG-Water-HorizontalRGB.png"

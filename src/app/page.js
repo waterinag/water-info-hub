@@ -103,8 +103,54 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const { showToast } = useToast();
   const [searchTerm, setSearchTerm] = useState("");
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    desc: "",
+    keywords: "",
+    url: "",
+    thumbnail: null,
+  });
 
 
+  const handleCreate = async () => {
+    if (!form.name.trim()) {
+      showToast("Please enter a project name.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const formData = new FormData();
+      formData.append("project_name", form.name.trim());
+      formData.append("project_desc", form.desc || "");
+      formData.append("project_keywords", form.keywords || "");
+      formData.append("project_url", form.url || "");
+      if (form.thumbnail) {
+        formData.append("project_thumbnail", form.thumbnail);
+      }
+
+      const res = await fetch("/api/projects", {
+        method: "POST",
+        body: formData, // ✅ Let the browser handle content-type
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showToast("Project created successfully!");
+        fetchProjects();
+        setForm({ name: "" });
+        setOpen(false);
+      } else {
+        showToast(data.error || "Failed to create project.");
+      }
+    } catch (err) {
+      console.error("Error creating project:", err);
+      showToast("Error creating project.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   const fetchProjects = useCallback(async () => {
     try {
       setLoading(true);
@@ -178,6 +224,7 @@ export default function HomePage() {
                   <Search className="h-4 w-4 text-gray-500" />
                 </TextField.Slot>
               </TextField.Root>
+              
             </div>
           </div>
 
@@ -194,6 +241,9 @@ export default function HomePage() {
             <div className="text-gray-500">No project found.</div>
           )}
         </Box>
+
+
+        
       </Flex>
     </>
   );
