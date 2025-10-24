@@ -282,6 +282,11 @@ This opens http://localhost:5555
 
 → You’ll see your User table with all registered users.
 
+<!-- ---------------------- -->
+Initial projects seed in ject (prisma/seed/projects.json
+Run your seed command:
+npx prisma db seed
+<!-- ---------------------- -->
 
 12. Run the App
 npm run dev

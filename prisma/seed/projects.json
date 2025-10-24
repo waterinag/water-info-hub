@@ -1,64 +1,36 @@
 [
   {
-    "project_name": "Global Water Accounting Dashboard",
-    "project_url": "https://global.waterinag.org/",
-    "project_desc": "Create an automated Water Accounting Report for any Country and Basin.",
-    "project_keywords": "global, water accounting",
-    "project_thumbnail": "/api/media/global_wagen.png"
-  },
-  {
-    "project_name": "India Water Accounting Dashboard",
-    "project_url": "https://india.waterinag.org/",
-    "project_desc": "National-level platform for state and basin-scale water accounting in India.",
-    "project_keywords": "india, water accounting",
-    "project_thumbnail": "/api/media/india_ipa.png"
-  },
-  {
-    "project_name": "India IPA Report Generator",
-    "project_url": "https://eqipa.waterinag.org/",
-    "project_desc": "Automated IPA report generator for irrigation schemes in India. Reports can be generated based on selected year and season.",
-    "project_keywords": "india, ipa",
-    "project_thumbnail": "/api/media/eqipa.png"
-  },
-  {
-    "project_name": "Kenya Water Informatics Dashboard",
-    "project_url": "https://kenya.waterinformatics.org/",
-    "project_desc": "A comprehensive platform designed for the planning and management of water resources in Kenya. It features hydronomic zoning and supports the Ministry of Water, Sanitation, and Irrigation.",
-    "project_keywords": "kenya, water informatics",
-    "project_thumbnail": "/api/media/kwid.png"
-  },
-  {
-    "project_name": "Afghanistan Water Informatics Dashboard",
-    "project_url": "https://afg.waterinformatics.org/",
-    "project_desc": "Interactive dashboard for Afghanistan’s water resource monitoring and basin-level accounting.",
-    "project_keywords": "afghanistan, water informatics",
-    "project_thumbnail": "/api/media/AFG_WI.png"
-  },
-  {
     "project_name": "Global Virtual Water Flow Dashboard",
     "project_url": "https://virtualwater.waterinag.org/",
     "project_desc": "Visualizes the movement of virtual water between countries through trade relationships.",
     "project_keywords": "global, virtual water",
     "project_thumbnail": "/api/media/virtual_water.png"
   },
+    {
+    "project_name": "Nourish & Flourish",
+    "project_url": "https://nourish-flourish.waterinformatics.org/",
+    "project_desc": "WRI Water Stress, Irrigation, FAOSTAT Data",
+    "project_keywords": "nourish-flourish, WRI, faostat",
+    "project_thumbnail": "/api/media/nourish-flourish.png"
+  },
   {
     "project_name": "Tunisia Water Accounting App",
     "project_url": "https://waterinag.projects.earthengine.app/view/tunisia",
-    "project_desc": "Google Earth Engine app for monitoring water use and irrigation performance in Tunisia.",
+    "project_desc": "Tunisia Water Accounting App",
     "project_keywords": "tunisia, gee",
     "project_thumbnail": "/api/media/tunisia_gee.png"
   },
   {
     "project_name": "Djibouti Water Accounting App",
     "project_url": "https://waterinfor.projects.earthengine.app/view/djibouti",
-    "project_desc": "Water informatics app for Djibouti supporting sustainable resource management.",
+    "project_desc": "Djibouti Water Accounting App",
     "project_keywords": "djibouti,  gee",
     "project_thumbnail": "/api/media/djibouti_gee.png"
   },
   {
     "project_name": "Kenya Irrigation Performance Assessment",
     "project_url": "https://kenya-ipa.waterinag.org/",
-    "project_desc": "Evaluates irrigation performance and water productivity across Kenyan schemes.",
+    "project_desc": "Kenya Irrigation Performance Assessment",
     "project_keywords": "kenya, gee",
     "project_thumbnail": "/api/media/kenya_gee.png"
   },
@@ -70,7 +42,7 @@
     "project_thumbnail": "/api/media/brazil_irrigated_area.png"
   },
   {
-    "project_name": "Pakistan IPA Dashboard",
+    "project_name": "Pakistan IPA",
     "project_url": "https://pakistan-ipa.waterinag.org/",
     "project_desc": "Dashboard for irrigation performance assessment and crop water use in Pakistan.",
     "project_keywords": "pakistan, irrigation, gee",
@@ -83,6 +55,15 @@
     "project_keywords": "central asia, irrigation, gee",
     "project_thumbnail": "/api/media/Central Asia Irrigated Area.png"
   },
+    {
+    "project_name": "Cropmapper Georgiap",
+    "project_url": "https://cropmapper-georgia.waterinag.org/",
+    "project_desc": "GEE application for mapping and monitoring irrigated areas across Central Asia.",
+    "project_keywords": "georgiap, irrigation, gee",
+    "project_thumbnail": "/api/media/cropmapper-georgia.png"
+  },
+
+  
   {
     "project_name": "Global Irrigated Area Products",
     "project_url": "https://waterinfor.projects.earthengine.app/view/irrigated-area-map",
@@ -98,14 +79,14 @@
     "project_thumbnail": "/api/media/central_asia_cropmaper.png"
   },
   {
-    "project_name": "India Irrigation Performance Assessment (GEE App)",
+    "project_name": "India Irrigation Performance Assessment",
     "project_url": "https://edipa.waterinag.org/",
-    "project_desc": "Earth Engine app for evaluating irrigation performance and evapotranspiration patterns in India.",
+    "project_desc": "India Irrigation Performance Assessment (EDIPA)",
     "project_keywords": "india, irrigation, gee",
-    "project_thumbnail": "/api/media/EDIPA.png"
+    "project_thumbnail": "/api/media/edipa.png"
   },
   {
-    "project_name": "Afghanistan Crop Mapper (IPA)",
+    "project_name": "Afghanistan Crop Mapper",
     "project_url": "https://hydrosolutions.users.earthengine.app/view/cropmapper-afghanistan-wb-v1",
     "project_desc": "Afghanistan crop mapping and irrigation performance assessment tool.",
     "project_keywords": "afghanistan, crop mapping,  gee",
@@ -146,11 +127,70 @@
     "project_keywords": "fiji,gee",
     "project_thumbnail": "/api/media/fiji_gee.png"
   },
+
   {
     "project_name": "Burundi Irrigation Dashboard",
     "project_url": "https://burundi-irrigation.waterinag.org/",
     "project_desc": "Burundi Irrigation Dashboard",
     "project_keywords": "burundi, gee",
     "project_thumbnail": "/api/media/burundi_gee.png"
+  },
+
+  {
+    "project_name": "Afghanistan Water Informatics Dashboard",
+    "project_url": "https://afg.waterinformatics.org/",
+    "project_desc": "Afghanistan Water Informatics Dashboard",
+    "project_keywords": "afghanistan, water informatics",
+    "project_thumbnail": "/api/media/AFG_WI.png"
+  },
+    {
+    "project_name": "India IPA Report Generator (EQIPA)",
+    "project_url": "https://eqipa.waterinag.org/",
+    "project_desc": "Automated IPA report generator for irrigation schemes in India. Based on selected year and season.",
+    "project_keywords": "india, ipa",
+    "project_thumbnail": "/api/media/eqipa.png"
+  },  
+  {
+    "project_name": "India Water Accounting Dashboard",
+    "project_url": "https://india.waterinag.org/",
+    "project_desc": "National-level platform for state and basin-scale water accounting in India.",
+    "project_keywords": "india, water accounting",
+    "project_thumbnail": "/api/media/india_ipa.png"
+  },
+  {
+    "project_name": "Global Water Accounting Dashboard",
+    "project_url": "https://global.waterinag.org/",
+    "project_desc": "Automated Water Accounting Report Generator for any Country and Basin.",
+    "project_keywords": "global, water accounting",
+    "project_thumbnail": "/api/media/global_wagen.png"
+  },
+    {
+    "project_name": "GeoAI Chat App",
+    "project_url": "https://geochat.waterinag.org/",
+    "project_desc": "AI-powered geospatial assistant",
+    "project_keywords": "GeoAI, Geospatial Analysis",
+    "project_thumbnail": "/api/media/geoai_chat.png"
+  },
+    {
+    "project_name": "Kenya Water Informatics Dashboard",
+    "project_url": "https://kenya.waterinformatics.org/",
+    "project_desc": "Kenya Water Informatics Dashboard",
+    "project_keywords": "kenya, water informatics",
+    "project_thumbnail": "/api/media/kwid.png"
+  },
+  
+
+  {
+    "project_name": "Zambia Water Informatics Dashboard",
+    "project_url": "https://zambia.waterinformatics.org/",
+    "project_desc": "Zambia Water Informatics Dashboard",
+    "project_keywords": "zambia, water informatics",
+    "project_thumbnail": "/api/media/zwid.png"
   }
+
+
+
+
+
+
 ]
