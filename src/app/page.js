@@ -22,28 +22,28 @@ function ProjectCard({ project, onView }) {
       {/* Body */}
       <div className="relative w-full h-40 bg-gray-100">
         <a
-            href={project.project_url}
-            target="_blank"
-            rel="noopener noreferrer"
-             
-          >
-        {project.project_thumbnail && (
+          href={project.project_url}
+          target="_blank"
+          rel="noopener noreferrer"
 
-                    <img
-  src={project.project_thumbnail}
-  alt={project.project_name}
-  className="object-cover w-full h-40 rounded-lg"
-/>
+        >
+          {project.project_thumbnail && (
 
-          // <Image
-          //   src={project.project_thumbnail}
-          //   alt={project.project_name}
-          //   fill
-          //   className="object-cover"
-          // />
-        )}
+            <img
+              src={project.project_thumbnail}
+              alt={project.project_name}
+              className="object-cover w-full h-40 rounded-lg"
+            />
 
-          </a>
+            // <Image
+            //   src={project.project_thumbnail}
+            //   alt={project.project_name}
+            //   fill
+            //   className="object-cover"
+            // />
+          )}
+
+        </a>
 
       </div>
       <div className="p-4">
@@ -58,7 +58,7 @@ function ProjectCard({ project, onView }) {
         )}
 
 
-<p className="text-xs text-gray-400 mt-2">
+        <p className="text-xs text-gray-400 mt-2">
           Added:{" "}
           {new Date(project.createdAt).toLocaleDateString("en-GB", {
             day: "2-digit",
@@ -73,24 +73,24 @@ function ProjectCard({ project, onView }) {
                 key={i}
                 className="px-2 py-0.5 text-xs bg-blue-50 text-blue-700 rounded-full"
               >
-                {kw.trim()}
+                {kw.trim().toUpperCase()}
               </span>
             ))}
           </div>
         )}
 
-        
+
       </div>
 
       <div className="absolute right-2 bottom-2 flex space-x-2">
-         <a
-            href={project.project_url}
-            target="_blank"
-            rel="noopener noreferrer"
-             className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
-          >
- <SquareArrowOutUpRight className="h-5 w-5 text-blue-600" />
-          </a>
+        <a
+          href={project.project_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
+        >
+          <SquareArrowOutUpRight className="h-5 w-5 text-blue-600" />
+        </a>
 
       </div>
     </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
       setLoading(true);
       const res = await fetch("/api/projects", { cache: "no-store" });
       const data = await res.json();
-      console.log("data",data)
+      console.log("data", data)
 
       setProjects(data.projects || []);
     } catch (err) {
@@ -135,7 +135,7 @@ export default function HomePage() {
   if (status === "loading") return <p>Loading session...</p>;
 
 
-   const filteredProjects = projects.filter((p) => {
+  const filteredProjects = projects.filter((p) => {
     const search = searchTerm.toLowerCase();
     return (
       p.project_name?.toLowerCase().includes(search) ||
