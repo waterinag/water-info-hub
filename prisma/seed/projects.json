@@ -56,10 +56,10 @@
     "project_thumbnail": "/api/media/Central Asia Irrigated Area.png"
   },
     {
-    "project_name": "Cropmapper Georgiap",
+    "project_name": "Cropmapper Georgia",
     "project_url": "https://cropmapper-georgia.waterinag.org/",
     "project_desc": "GEE application for mapping and monitoring irrigated areas across Central Asia.",
-    "project_keywords": "georgiap, irrigation, gee",
+    "project_keywords": "georgia, irrigation, gee",
     "project_thumbnail": "/api/media/cropmapper-georgia.png"
   },
 
