@@ -61,7 +61,7 @@ export async function POST(req) {
       const filePath = path.join(uploadDir, filename);
       await fs.promises.writeFile(filePath, buffer);
       // thumbnailPath = `/upload/${filename}`; // ✅ public path
-      thumbnailPath = `/api/uploads/${filename}`;
+      thumbnailPath = `/api/media/${filename}`;
       // thumbnailPath = `/api/uploads/${Date.now()}_${thumbnailFile.name}`;
 
     }
