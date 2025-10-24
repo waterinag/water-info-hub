@@ -1,0 +1,11 @@
+/.next
+/node_modules
+package-lock.json
+public/.DS_Store
+.env
+
+/src/generated/prisma
+prisma/dev.db
+prisma/migrations
+uploads
+/uploads
