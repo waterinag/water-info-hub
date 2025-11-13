@@ -6,7 +6,7 @@ import path from "path";
 export async function GET() {
   try {
     const projects = await prisma.project.findMany({
-      orderBy: { createdAt: "desc" },
+      // orderBy: { createdAt: "acs" },
     });
     return NextResponse.json({ success: true, projects });
   } catch (err) {
