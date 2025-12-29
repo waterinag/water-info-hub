@@ -186,7 +186,7 @@ const handleRegister = async (data) => {
         >
           <Box>
             <Image
-              src="/images/Logo.png"
+              src="/images/Logo_WI.png"
               alt="Logo"
               width={174}
               height={75}

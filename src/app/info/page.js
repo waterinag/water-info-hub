@@ -42,13 +42,13 @@ function WaterAccountingReport() {
 
             <Text
               as="p"
-              size="3"
+              size="5"
               className="text-gray-600 leading-relaxed max-w-3xl"
             >
-              The <strong>Water Informatics Tools & Projects Hub</strong> is an
-              internal platform developed for the <strong>World Bank Water
-              Informatics Team</strong> to showcase, organize, and access all
-              ongoing and completed <strong>geospatial tools, dashboards,</strong> and
+              The Water Informatics Tools & Projects Hubis an
+              internal platform developed for the World Bank Water
+              Informatics Team to showcase, organize, and access all
+              ongoing and completed geospatial tools, dashboards, and
               applications developed under the team’s global initiatives.
             </Text>
           </Box>

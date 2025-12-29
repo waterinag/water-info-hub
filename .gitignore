@@ -9,3 +9,4 @@ prisma/dev.db
 prisma/migrations
 uploads
 /uploads
+backup
