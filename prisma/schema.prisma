@@ -3,9 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
+
 
 model User {
   id        Int      @id @default(autoincrement())
@@ -24,11 +26,10 @@ model Project {
   id                Int      @id @default(autoincrement())
   project_name      String
   project_desc      String?
-  project_keywords  String?     // ✅ optional keywords field
-  project_thumbnail String?     // ✅ saved as "/upload/<filename>"
+  project_keywords  String?
+  project_thumbnail String?
   project_url       String?
   createdAt         DateTime @default(now())
-
-
+  updatedAt         DateTime @updatedAt
 }
 

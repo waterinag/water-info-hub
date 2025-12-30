@@ -100,7 +100,7 @@ function AppHeader() {
         >
           <Flex gap="3" align="center">
 
-            <Image src="/images/Logo_WI.png" alt="Logo" width={70} height={30} />
+            {/* <Image src="/images/Logo_WI.png" alt="Logo" width={70} height={30} /> */}
             <Image
               src="/images/Logo_WB_Dark.png"
               alt="Logo"

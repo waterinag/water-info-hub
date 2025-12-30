@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma.js";
-import fs from "fs";
+import { supabaseServer } from "@/lib/supabaseServer";
 import path from "path";
 
 export async function GET() {
   try {
     const projects = await prisma.project.findMany({
-      // orderBy: { createdAt: "acs" },
+      orderBy: { createdAt: "desc" },
     });
     return NextResponse.json({ success: true, projects });
   } catch (err) {
@@ -22,16 +22,15 @@ function sanitizeFilename(originalName) {
   const timestamp = Date.now();
   const baseName = path
     .basename(originalName, path.extname(originalName))
-    .replace(/[^a-zA-Z0-9-_]/g, ""); // remove everything except letters, numbers, - and _
+    .replace(/[^a-zA-Z0-9-_]/g, "");
   const extension = path.extname(originalName).toLowerCase();
   return `${timestamp}_${baseName}${extension}`;
 }
 
-
-
 export async function POST(req) {
   try {
     const form = await req.formData();
+
     const name = form.get("project_name")?.toString();
     const desc = form.get("project_desc")?.toString() || "";
     const keywords = form.get("project_keywords")?.toString() || "";
@@ -45,25 +44,37 @@ export async function POST(req) {
       );
     }
 
-    // ✅ Ensure upload folder exists
-    const uploadDir = path.join(process.cwd(),  "uploads");
-    if (!fs.existsSync(uploadDir)) {
-      fs.mkdirSync(uploadDir, { recursive: true });
-    }
-
     let thumbnailPath = null;
+
+    // Upload to Supabase Storage
     if (thumbnailFile && typeof thumbnailFile === "object") {
+      const filename = sanitizeFilename(thumbnailFile.name);
+
+      // Convert File -> ArrayBuffer -> Buffer
       const bytes = await thumbnailFile.arrayBuffer();
       const buffer = Buffer.from(bytes);
-     const filename = sanitizeFilename(thumbnailFile.name);
 
-      
-      const filePath = path.join(uploadDir, filename);
-      await fs.promises.writeFile(filePath, buffer);
-      // thumbnailPath = `/upload/${filename}`; // ✅ public path
-      thumbnailPath = `/api/media/${filename}`;
-      // thumbnailPath = `/api/uploads/${Date.now()}_${thumbnailFile.name}`;
+      const bucket = "project-thumbnails";
+      const storagePath = `projects/${filename}`;
 
+      const { error: uploadError } = await supabaseServer.storage
+        .from(bucket)
+        .upload(storagePath, buffer, {
+          contentType: thumbnailFile.type || "application/octet-stream",
+          upsert: false,
+        });
+
+      if (uploadError) {
+        console.error("Supabase upload error:", uploadError);
+        return NextResponse.json(
+          { success: false, message: "Thumbnail upload failed" },
+          { status: 500 }
+        );
+      }
+
+      // Public URL (works if bucket is public)
+      const { data } = supabaseServer.storage.from(bucket).getPublicUrl(storagePath);
+      thumbnailPath = data.publicUrl;
     }
 
     const project = await prisma.project.create({

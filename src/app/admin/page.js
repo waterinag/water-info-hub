@@ -109,6 +109,8 @@ export default function HomePage() {
     thumbnail: null,
   });
 
+  console.log("projects",projects)
+
 
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
@@ -372,7 +374,8 @@ export default function HomePage() {
             <p className="text-gray-500">Loading projects...</p>
           ) : projects.length > 0 ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {[...projects].reverse().map((p) => (
+              {/* {[...projects].reverse().map((p) => ( */}
+              {[...projects].map((p) => (
                 <ProjectCard
                   key={p?.id}
                   project={p}
