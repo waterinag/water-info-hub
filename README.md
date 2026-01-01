@@ -21,7 +21,7 @@ npx next dev -p 3008
 
 - Start Next JS Project using PM2 process
 PORT=3008 pm2 start npm --name "water_info_hub" -- start
-
+pm2 start ecosystem.config.js
 
 - Check status:
 pm2 status
