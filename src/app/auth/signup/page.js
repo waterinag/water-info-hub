@@ -185,13 +185,13 @@ const handleRegister = async (data) => {
           gap="8"
         >
           <Box>
-            <Image
+            {/* <Image
               src="/images/Logo_WI.png"
               alt="Logo"
               width={174}
               height={75}
                className="mx-auto mb-8"
-            />
+            /> */}
    
               {/* <Text as="p" align="center" size="8" weight="medium">
                 Create your WAGen Account

@@ -1,0 +1,22 @@
+
+
+
+NEXTAUTH_SECRET=CIByZcbp9H8e686MVeMeQ55EqaeEH2XKQYB
+
+
+# NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+NEXT_PUBLIC_APP_URL=https://waterinag.org
+
+
+# Prisma connects to Supabase Postgres
+
+DATABASE_URL="postgresql://postgres:chaudharymac2604@db.zxfogvzhfnoqmpbzumzw.supabase.co:6543/postgres?pgbouncer=true"
+DIRECT_URL="postgresql://postgres:chaudharymac2604@db.zxfogvzhfnoqmpbzumzw.supabase.co:5432/postgres"
+
+
+# Supabase Storage uploads (server-only)
+SUPABASE_URL="https://zxfogvzhfnoqmpbzumzw.supabase.co"
+
+## Supabase Dashboard → Project Settings → API Keys → Secret keys
+SUPABASE_SERVICE_ROLE_KEY="sb_secret_8AVdy5sL-a5V2GhNYFz1cw_9rJxl-eM"

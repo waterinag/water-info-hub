@@ -50,13 +50,13 @@ function Login() {
       gap="8"
     >
       <Box>
-        <Image
+        {/* <Image
           src="/images/Logo_WI.png"
           alt="Logo"
           width={174}
           height={75}
           className="mx-auto mb-8"
-        />
+        /> */}
         {/* <Text as="p" align="center" size="9" weight="medium">
           Welcome to Water Informatics
         </Text> */}
